@@ -1,0 +1,39 @@
+<div id="detail">
+  <div class="container container-space" *ngIf="!loader">
+    <div class="row">
+      <div class="col-md-6">
+        <img class="img-fluid img-detail" [src]="cocktailDetail.img" alt="" />
+        <div class="product-thumbnails">
+          <ul>
+            <li  class="thumbnail-active" ><img [src]="cocktailDetail.img" alt="" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 content-detail">
+       <a href="#" [routerLink]="['/cocktails']" class="icon-back"> <i class="fa-solid fa-arrow-left"></i></a>
+        <h1 class="my-4">{{cocktailDetail.name}}</h1>
+        <h5 v-if="stockAvailability">Categoría: {{cocktailDetail.category}}</h5>
+        <h5 class="my-3">Ingredientes: <span class="badge rounded-circle bg-primary">{{cocktailDetail.numIngredients}}</span></h5>
+        <ul class="content-i-c">
+          <div class="content-quantity">
+            <li *ngFor="let c of cocktailDetail.measures">{{ c }} </li>
+          </div>
+          <div class="content-ingredients">
+            <li *ngFor="let i of cocktailDetail.ingredients">{{ i }} </li>
+          </div>
+        </ul>
+        <h5 class="my-3"><i class="fa-solid fa-blender"></i> Instrucciones:</h5>
+        <span v-else="stockAvailability">{{cocktailDetail.instructions}}</span>
+        <h5 class="my-3"><i class="fa-solid fa-martini-glass-citrus"></i>  Presentacion:</h5>
+        <span v-else="stockAvailability">{{cocktailDetail.glass}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="h-100 text-center" *ngIf="loader">
+    <div class="loader" id="loader-2">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>

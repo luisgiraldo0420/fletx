@@ -1,0 +1,69 @@
+<div class="row">
+  <div class="col-12">
+
+    <div class="row">
+      <section class="grid-demo">
+        <h2 class="section-title"><span>Cocktails</span></h2>
+        <div class="col-12">
+          <div class="container">
+            <form (ngSubmit)="filterData()" >
+              <div class="row content-filter">
+                  <div class="col-12 py-2 col-md-4 offset-md-0 col-lg-2 offset-lg-3  px-md-0  ml-auto filter-content">
+                    <i class="fa-solid fa-filter"></i>
+                    <select name="search" id="search" class=" form-control" [(ngModel)]="filter.searchBy">
+                      <option *ngFor="let c of searchList" [ngValue]="c.value" for="filterText">{{ c.name }}</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-4 col-lg-3 py-2 px-md-0 mr-auto">
+                    <div class="input-group">
+                    <input type="text" placeholder="Texto a buscar"  [(ngModel)]="filter.filterText" name="filterText" id="filterText" class="form-control">
+                    </div>
+                    <div class="input-group-append">
+                      <input type="submit" class="btn btn-outline-dark" value="Buscar">
+                    </div>
+                  </div>
+
+              </div>
+           </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="product-content" *ngIf="!loader">
+      <main class="container" *ngIf="cocktailsList.length > 0 ">
+        <section
+          class="card"
+          *ngFor="let item of cocktailsList | paginate: { itemsPerPage: items, currentPage: page }"
+          >
+         <a href="#" [routerLink]="['/detail', item.id]">
+          <div class="product-image">
+            <img [src]="item.img" alt="OFF-white Red Edition" draggable="false" />
+          </div>
+          <div class="product-info">
+            <h2><i class="fa-solid fa-martini-glass-citrus"></i> {{item.name}}</h2>
+            <p>{{item.glass}}</p>
+            <div class="price">{{item.category}}</div>
+          </div>
+         </a>
+        </section>
+      </main>
+     <div class="container text-center">
+      <pagination-controls
+      (pageChange)="page = $event"
+      *ngIf="cocktailsList.length > items"
+      previousLabel="Anterior"
+      nextLabel="Siguiente">
+    </pagination-controls>
+     </div>
+    </div>
+    <div class="h-100 text-center" *ngIf="loader">
+      <div class="loader" id="loader-2">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+
+  </div>
+</div>
