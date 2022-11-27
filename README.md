@@ -9,7 +9,7 @@
    </p>
    
 
-*[Descripción](#Descripción)![Uploading tita.png…]()
+*[Descripción](#Descripción)
 
 
 
