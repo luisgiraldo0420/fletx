@@ -1,27 +1,55 @@
-# AppCocktails
+<h1 align="center"> Fletx app </h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
+![ic_fletx](https://user-images.githubusercontent.com/104444432/204152397-0fecafaa-f7c8-46ab-bab4-5c04e96d84ff.svg)
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<p align="left">
+   <img src="https://img.shields.io/badge/STATUS-FINALIZADO-green">
+   </p>
+   
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+*[Descripción](#Descripción)![Uploading tita.png…]()
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+*[Funcionalidad](#Funcionalidad)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+*[Tecnologías utilizadas](#tecnologías-utilizadas)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+*[Iniciar el proyecto](#iniciar-el-proyecto)
 
-## Further help
+## Descripción
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Proyecto desarrollado para prueba tecnica Fletx
+
+## Funcionalidad
+
+Filtros para localizar cocteles (nombre, categoria, vaso, ingredientes)
+Listado de coctelesfiltrados
+detalle de cocteles 
+
+
+## Tecnologías utilizadas
+Angular 15.0.1
+css\
+despliegue en netlify:\
+
+
+### `Iniciar el proyecto`
+
+1. Clonar el repositorio
+2. ejecutar npm install para instalar las dependencias
+3. correr el comando npm start o ng serve
+4. iniciar el navegador en [http://localhost:4200](http://localhost:4200)
+
+
+
+
+
+
+
+
+
+
