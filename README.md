@@ -34,7 +34,6 @@ detalle de cocteles
 ## Tecnologías utilizadas
 Angular 15.0.1
 css\
-despliegue en netlify:\
 
 
 ### `Iniciar el proyecto`
